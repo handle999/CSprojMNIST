@@ -1,0 +1,10 @@
+/**app.wxss**/
+.container {
+  height: 100%; /* 将容器的高度设置为父元素的高度的百分比，容器会占据父元素的整个高度 */
+  display: flex; /* 将容器元素应用 Flex 布局，以便更灵活地排列其子元素 */
+  flex-direction: column; /* 指定子元素在主轴上的排列方式为垂直堆叠 */
+  align-items: center; /* 子元素在交叉轴上居中对齐，垂直方向上的居中对齐 */
+  justify-content: space-between; /* 子元素在主轴上均匀分布，使它们在主轴上有间距，顶部和底部分别对齐容器的顶部和底部 */
+  padding: 20rpx 0; /* 设置容器的内边距，200rpx 表示垂直方向上的上下内边距，0 表示水平方向上的内边距。这可以用来在容器的上下部分添加间距 */
+  box-sizing: border-box; /* 定义了盒模型的计算方式，border-box 表示内边距和边框会包含在元素的总宽度内 */
+} 

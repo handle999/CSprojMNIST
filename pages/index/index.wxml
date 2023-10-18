@@ -1,0 +1,41 @@
+<!-- pages/index/index.wxml -->
+
+<view class="container">
+    <view class="container-row">
+        <view data-tab="0" class="switch {{currentTab === 0 ? 'active' : ''}}" bindtap="switchDiv">手写数字</view>
+        <view data-tab="1" class="switch {{currentTab === 1 ? 'active' : ''}}" bindtap="switchDiv">图片上传</view>
+    </view>
+
+    <!-- 第一个div包含手写框、提交和清空按钮 -->
+    <view wx:if="{{currentTab === 0}}">
+        <canvas id="handwriting" 
+                class="canvas" 
+                disable-scroll="true" 
+                bindtouchstart="touchStart" 
+                bindtouchmove="touchMove" 
+                bindtouchend="touchEnd"
+                type="2d">
+        </canvas>
+        <button bindtap="submitHandwriting">提交</button>
+        <button bindtap="touchClear">清空</button>
+    </view>
+
+    <!-- 第二个div包含选择图片、提交和清空按钮以及图片展示 -->
+    <view wx:else>
+        <button bindtap="chooseImage">选择图片</button>
+        <button bindtap="submitImage">提交</button>
+        <button bindtap="clearImage">清空</button>
+        <view class="image-container">
+            <image src="{{selectedImage}}" mode="aspectFit" wx:if="{{selectedImage}}"></image>
+        </view>
+    </view>
+
+    <!-- 数字结果输出 -->
+    <view class="result-container" wx:if="{{showResult}}">
+        <text>识别结果：</text>
+        <text class="result-text">{{numberResult}}</text>
+    </view>
+    <!-- 问题反馈按钮 -->
+    <button class="question" bindtap="showFeedbackDialog">问题反馈</button>
+
+</view>

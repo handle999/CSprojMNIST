@@ -1,0 +1,47 @@
+/* pages/logs/logs.wxss */
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column; /*这指定了子元素在主轴上的排列方式为垂直方向，即子元素垂直堆叠。*/
+  align-items: center; /*将子元素在交叉轴上居中对齐，垂直方向上的居中对齐。*/
+  justify-content: space-between; /*将子元素在主轴上均匀分布，使它们在主轴上有间距，顶部和底部分别对齐容器的顶部和底部。*/
+  text-align: center;
+  padding: 20rpx;
+  height: 100%;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.signature {
+  font-size: 16px;
+  color: #666;
+  margin: 10px;
+}
+
+.edit-button {
+  flex: 1;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5rpx;
+  padding: 10rpx 20rpx;
+  margin-top: 20rpx;
+}

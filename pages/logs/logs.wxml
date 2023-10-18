@@ -1,0 +1,15 @@
+<!-- pages/logs/logs.wxml-->
+<view class="container">
+    <view class="profile">
+          <image class="avatar" src="{{avatarUrl}}" mode="aspectFill" bindtap="changeAvatar"></image>
+          <text class="username">{{username}}</text>
+          <text class="signature">{{signature}}</text>
+          <button class="edit-button" bindtap="editProfile">编辑个人信息</button>
+    </view>
+
+    <!-- <view class="container log-list">
+        <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
+            <text class="log-item">{{index + 1}}. {{log.date}}</text>
+        </block>
+    </view> -->
+</view>
